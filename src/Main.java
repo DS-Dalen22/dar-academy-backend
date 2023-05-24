@@ -17,6 +17,7 @@ public class Main {
 
 
 
+
        int cost = 6500;
        int discount = 0;
 
