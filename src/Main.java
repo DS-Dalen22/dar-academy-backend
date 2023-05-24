@@ -10,6 +10,9 @@ public class Main {
        } else {
            System.out.println("Прямоугольник не квадратный");
        }
+       // Задание 1
+
+
 
 
 
@@ -23,6 +26,8 @@ public class Main {
        }
        int cost1 = cost - discount;
         System.out.println("Стоимость покупки " + cost1);
+
+        // Задание 2
 
 
 
@@ -42,6 +47,8 @@ public class Main {
             System.out.println("Оценка: A");
         }
 
+        // задание 3
+
 
 
         int number = 12345;
@@ -54,6 +61,8 @@ public class Main {
         }
 
         System.out.println(reverse);
+
+        // Задание 4
 
 
 
@@ -80,6 +89,26 @@ public class Main {
         } else {
             System.out.println(number1 + " не является простым числом");
         }
+        // Задание 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
