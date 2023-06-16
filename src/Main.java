@@ -2,95 +2,116 @@ import com.sun.org.apache.xml.internal.security.utils.HelperNodeList;
 
 public class Main {
 
-    public static void main(String[] args) {
-       int lenght = 15;
-       int width = 10;
-       if (lenght == width) {
-           System.out.println("Прямоугольник квадратный");
-       } else {
-           System.out.println("Прямоугольник не квадратный");
-       }
-       // Задание 1
+    public static double calculateAverage(int a, int b, int c) {
+        double average = (a + b + c) / 3.0;
+        return average;
+    }
+
+    public static int findMinimum(int a, int b, int c) {
+        int minimum = a;
 
 
-
-
-
-
-
-       int cost = 6500;
-       int discount = 0;
-
-       if (cost > 5000) {
-           discount = cost / 10;
-
-       }
-       int cost1 = cost - discount;
-        System.out.println("Стоимость покупки " + cost1);
-
-        // Задание 2
-
-
-
-        int grade = 75;
-
-        if (grade < 25) {
-            System.out.println("Оценка: F");
-        } else if (grade >= 25 && grade < 45) {
-            System.out.println("Оценка: E");
-        } else if (grade >= 45 && grade < 50) {
-            System.out.println("Оценка: D");
-        } else if (grade >= 50 && grade < 60) {
-            System.out.println("Оценка: C");
-        } else if (grade >= 60 && grade < 80) {
-            System.out.println("Оценка: B");
-        } else {
-            System.out.println("Оценка: A");
+        if (b < minimum) {
+            minimum = b;
+        }
+        if (c < minimum) {
+            minimum = c;
         }
 
-        // задание 3
+        return minimum;
 
 
+    }
 
-        int number = 12345;
-        String reverse = "";
-
-        while (number > 0) {
-            int d = number % 10;
-            reverse += d;
-            number /= 10;
-        }
-
-        System.out.println(reverse);
-
-        // Задание 4
+    public static int countWords(String str) {
+        int count = 0;
+        boolean isWord = false;
 
 
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
 
-
-
-
-
-
-        int number1 = 3;
-        boolean a = true;
-
-        if (number1 <= 1) {
-            a = false;
-        } else {
-            for (int i = 2; i < number1; i++) {
-                if (number1 % i == 0) {
-                    a = false;
+            if (Character.isLetterOrDigit(c)) {
+                if (!isWord) {
+                    count++;
+                    isWord = true;
                 }
+            } else {
+                isWord = false;
             }
         }
 
-        if (a) {
-            System.out.println(number1 + " является простым числом");
-        } else {
-            System.out.println(number1 + " не является простым числом");
+        return count;
+
+    }
+
+
+    public static int count1(int number) {
+        int count = 0;
+
+        while (number > 0) {
+            int digit = number % 10;
+
+            if (digit == 2) {
+                count++;
+            }
+
+            number /= 10;
         }
-        // Задание 5
+
+        return count;
+    }
+
+    public static int calculate(int number) {
+        int sum = 0;
+
+        while (number != 0) {
+            int digit = number % 10;
+            sum += digit;
+            number /= 10;
+        }
+
+        return sum;
+    }
+
+
+    public static void main(String[] args) {
+        int firstNumber = 25;
+        int secondNumber = 45;
+        int thirdNumber = 65;
+
+        double averageValue = calculateAverage(firstNumber, secondNumber, thirdNumber);
+
+        System.out.println("Среднее значение: " + averageValue);
+
+
+        int firstNumber1 = 25;
+        int secondNumber1 = 37;
+        int thirdNumber1 = 29;
+
+        int minimumValue = findMinimum(firstNumber1, secondNumber1, thirdNumber1);
+
+        System.out.println("Наименьшее значение: " + minimumValue);
+
+
+        String input = "Java is good to learn Object Oriented programming.";
+        int wordCount = countWords(input);
+
+        System.out.println("Количество слов в строке: " + wordCount);
+
+        int number = 1254212;
+        int digitCount = count1(number);
+
+        System.out.println("Количество цифр: " + digitCount);
+
+
+        int number1 = 252;
+        int sum = calculate(number);
+
+        System.out.println("Сумма цифр числа " + number1 + " = " + sum);
+
+    }
+}
 
 
 
