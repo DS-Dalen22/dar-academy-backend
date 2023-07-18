@@ -22,7 +22,7 @@ public class SumOddLenghtSubarrays {
     public static void main(String[] args) {
         int[] arr = {1, 4, 2, 5, 3};
         int sum = sumOddLengthSubarrays(arr);
-        System.out.println("Sum of odd-length subarrays: " + sum);
+        System.out.println(sum);
     }
 
 }
